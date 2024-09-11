@@ -165,6 +165,118 @@ another through links
   4. **Registration Requirement**:
      - Patients must complete the registration process on their first visit.
     
-  
+
+# Practice for Database Foundations 2-1 : Relational Databases
+
+## Exercise 1: Analyze the features of a Relational Database
+
+#### 1. Identify the Possible Tables and Associated Fields
+
+**Scenario: Book.com**
+
+Book.com is an online virtual store where customers can browse and select books. Based on this scenario, the database could include the following tables and fields:
+
+- **Books**
+  - **Fields**: Book ID, Title, ISBN, Year, Price, Author ID, Publisher ID
+
+- **Authors**
+  - **Fields**: Author ID , Name, Address, Homepage URL
+
+- **Publishers**
+  - **Fields**: Publisher ID , Name, Address, Phone Number, Website URL
+
+- **Warehouses**
+  - **Fields**: Warehouse ID , Code, Address, Phone Number
+
+- **Stock**
+  - **Fields**: Stock ID, Warehouse ID, Book ID, Number of Copies
+
+- **Customers**
+  - **Fields**: Customer ID, Name, Address, Email ID, Phone Number
+
+- **Shopping_Carts**
+  - **Fields**: Shopping Cart ID, Customer ID, Cart Item ID
+
+- **Cart_Items**
+  - **Fields**: Cart Item ID, Shopping Cart ID, Book ID, Quantity
+
+- **Orders**
+  - **Fields**: Order ID, Customer ID, Billing Address, Shipping Address, Shipping Option, Payment Info, Email Notification
+
+#### 2. Identify the Tables and Associated Fields
+
+**Scenario: ABC Ltd Sales and Stock Control**
+
+ABC Ltd is setting up a relational database system for managing sales and stock control. The database could include the following tables and fields:
+
+- **Customers**
+  - **Fields**: Customer ID, Name, Address, Email ID, Phone Number
+
+- **Orders**
+  - **Fields**: Order ID, Customer ID, Order Date, Status
+
+- **Order_Items**
+  - **Fields**: Order Item ID, Order ID, Product ID, Quantity, Unit Price
+
+- **Products**
+  - **Fields**: Product ID, Name, Description, Preferred Supplier ID, Quantity in Stock, Reorder Level
+
+- **Suppliers**
+  - **Fields**: Supplier ID, Name, Address, Phone Number
+
+- **Invoices**
+  - **Fields**: Invoice ID, Order ID, Invoice Date, Total Amount
+
+- **Payments**
+  - **Fields**: Payment ID, Customer ID, Invoice ID, Payment Amount, Payment Date
+
+
+    
+# Practice for Database Foundations 2-2: Conceptual and Physical Data Models
+### 1. Provide five reasons for creating a conceptual data model.
+
+1. **Captures Business Requirements**: A conceptual data model captures the functional and informational needs of a business, ensuring that the model reflects both current and potential future needs.
+
+2. **High-Level Understanding**: It provides a high-level view of the data and its relationships without delving into implementation details, making it easier for stakeholders to understand the system's requirements and design.
+
+3. **Entity Identification**: Identifies important entities (objects that will become tables in the database) and the relationships among them, which is crucial for understanding how different parts of the business interact.
+
+4. **Focus on Business Needs**: Addresses what is conceptually ideal for the business without being constrained by physical or technical limitations, allowing for a clearer vision of what the data model should achieve.
+
+5. **Foundation for Further Models**: Serves as the basis for creating more detailed logical and physical data models, ensuring that the foundational business requirements are correctly translated into more technical specifications.
+
+### 2. List two examples of conceptual models and physical models.
+
+#### Examples of Conceptual Models
+
+1. **Entity-Relationship Diagram (ERD)**: A high-level diagram that illustrates entities and their relationships without specifying details like attributes or primary keys.
+
+2. **Business Process Model**: A diagram or model that shows how different business processes interact with data entities, focusing on the flow of information rather than the technical implementation.
+
+#### Examples of Physical Models
+
+1. **Relational Schema**: A detailed representation of tables, columns, primary keys, and foreign keys that defines how data is physically stored and accessed in a relational database.
+
+2. **Database Implementation Script**: SQL scripts or DDL (Data Definition Language) statements used to create tables, indexes, views, and other database objects in a specific database management system (DBMS).
+
+# Practice for
+
+# Practice for
+
+# Practice for
+
+# Practice for
+
+# Practice for
+
+# Practice for
+
+
+# Practice for
+
+
+# Practice for
+
+Practice for
   
      
