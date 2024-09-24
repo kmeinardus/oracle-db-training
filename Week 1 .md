@@ -259,13 +259,237 @@ ABC Ltd is setting up a relational database system for managing sales and stock 
 
 2. **Database Implementation Script**: SQL scripts or DDL (Data Definition Language) statements used to create tables, indexes, views, and other database objects in a specific database management system (DBMS).
 
-# Practice for
+# Practice for Database Foundations2-3 : Entities and Attributes
 
-# Practice for
 
-# Practice for
+## Academic Database (School Management System) ERD
 
-# Practice for
+## Entities and Attributes
+
+### Identified Entities
+
+1. **School/University**
+2. **Department**
+3. **Course**
+4. **Student**
+5. **Faculty**
+6. **Parent Information**
+7. **Attendance**
+8. **Exam**
+9. **Academic Session**
+
+### Entity Relationship Diagram (ERD) Structure
+
+## Exercise 2: Identify and Add Attributes
+
+### Attributes and Optionality
+
+| Entity               | Attribute                 | Optionality |
+|---------------------|---------------------------|-------------|
+| **School/University** | School ID                 | *           |
+|                     | Name                      | *           |
+|                     | Location                  | °           |
+| **Department**      | Department ID             | *           |
+|                     | Name                      | *           |
+|                     | Head of Department        | °           |
+| **Course**          | Course ID                 | *           |
+|                     | Title                     | *           |
+|                     | Credits                   | *           |
+|                     | Department ID             | *           |
+| **Student**         | Student ID                | *           |
+|                     | Name                      | *           |
+|                     | Date of Birth             | *           |
+|                     | Email                     | °           |
+|                     | Phone Number              | °           |
+| **Faculty**         | Faculty ID                | *           |
+|                     | Name                      | *           |
+|                     | Department ID             | *           |
+|                     | Email                     | °           |
+|                     | Phone Number              | °           |
+| **Parent Information** | Parent ID                 | *           |
+|                     | Student ID                | *           |
+|                     | Name                      | *           |
+|                     | Email                     | °           |
+|                     | Phone Number              | °           |
+| **Attendance**      | Attendance ID             | *           |
+|                     | Student ID                | *           |
+|                     | Course ID                 | *           |
+|                     | Attendance Date           | *           |
+|                     | Status                    | *           |
+| **Exam**            | Exam ID                   | *           |
+|                     | Course ID                 | *           |
+|                     | Exam Date                 | *           |
+|                     | Total Marks               | *           |
+| **Academic Session** | Session ID                | *           |
+|                     | Year                      | *           |
+|                     | Start Date                | *           |
+|                     | End Date                  | *           |
+
+
+
+
+# Practice for Database Foundations 2-4 : Unique Identifiers
+
+## Database Foundations: Unique Identifiers
+
+### Exercise 1: Identify the Unique Identifier and Corresponding Primary Keys
+
+#### 1. Unique Identifier for a Song
+To find a particular song in a whole collection, a unique identifier could be:
+- **Song ID** (a unique number or code assigned to each song).
+
+#### 2. Unique Identifiers for Students
+To identify a single student from the classroom, the following attributes could serve as unique identifiers:
+- **Student ID** 
+- A combination of **first name**, **last name**, and potentially **date of birth** could also serve as unique identifiers, but it’s less reliable than a single unique ID.
+
+#### 3. Unique Identifiers for Entities
+- **Entity: STUDENT**
+- **Attributes:** student ID, first name, last name, address
+  - **Unique Identifier:** Student ID
+
+- **Entity: MOVIE**
+- **Attributes:** title, date released, producer, director
+  - **Unique Identifier:** Movie ID or A combination of **title** and **date released** 
+
+- **Entity: LOCKER**
+  - **Attributes:** size, location, number
+  - **Unique Identifier:** number
+
+### Exercise 2: Identify the Unique Identifiers and Add to the ERD
+
+#### Unique Identifiers for the Academic Database
+
+1. **Entities and Unique Identifiers:**
+
+| Entity               | Unique Identifier      |
+|---------------------|------------------------|
+| School/University    | School ID              |
+| Department          | Department ID          |
+| Course              | Course ID              |
+| Student             | Student ID             |
+| Faculty             | Faculty ID             |
+| Parent Information   | Parent ID              |
+| Attendance          | Attendance ID          |
+| Exam                | Exam ID                |
+| Academic Session    | Session ID             |
+
+#### Candidate Unique Identifiers
+
+
+| Entity               | Candidate Unique Identifiers                            |
+|---------------------|-------------------------------------------------------|
+| **Student**         | - Student ID (unique number assigned to each student) <br> - Email Address (assuming uniqueness) <br> - First Name + Last Name + Date of Birth (less reliable) |
+| **Movie**           | - Movie ID (unique identifier for each movie) <br> - Title + Date Released (can be unique for specific films) |
+| **Locker**          | - Locker Number (typically unique within a location) <br> - Size + Location (could be unique depending on context) |
+| **Course**          | - Course ID (unique identifier for each course) <br> - Title + Department (may be unique within a specific department) |
+| **Faculty**         | - Faculty ID (unique identifier for each faculty member) <br> - Email Address (assuming uniqueness) |
+| **Parent Information** | - Parent ID (unique identifier for each parent) <br> - Combination of Student ID + Parent Name (could be unique) |
+| **Attendance**      | - Attendance ID (unique identifier for each attendance record) <br> - Combination of Student ID + Course ID + Date (may be unique) |
+| **Exam**            | - Exam ID (unique identifier for each exam) <br> - Course ID + Exam Date (may be unique for specific courses) |
+| **Academic Session** | - Session ID (unique identifier for each academic session) <br> - Year + Term (may be unique depending on institution) |
+
+
+# Practice for Database Foundations 2-5 : Relationships
+
+## Exercise 1: Identify relationships from the ERD
+
+### Tasks
+1. Read the relationship. Which text corresponds to the diagram?
+   - **Answer:** b. Each EMPLOYEE must be assigned to one and only one DEPARTMENT. Each DEPARTMENT must be responsible for one or more EMPLOYEEs.
+
+2. Read each relationship in the model below. For each relationship, write the ERD statement and your comments. Use your knowledge of normal people and towns in your comments.
+   - **Answer:**
+       - each person must be born in one or more towns
+       - many people must be living in a town
+       - a town bay be the hometowm of many people
+       - many people may visit many towns
+       - Many towns must be visited by many people
+       - a person may be mayer of a town
+       - a town may be goverend by a person 
+
+
+# Practice for Database Foundations 2-6 : Entity Relationship Modeling (ERDs)
+Practices
+
+## Exercise 1: Identify the components in the ERD
+
+### Scenario 1: Company Departments and Employees
+
+#### 1. Entities and Attributes
+- **Entities:**
+  - Department
+  - Employee
+  - Project
+- **Attributes:**
+  - **Department:**
+    - Department Name 
+    - Supervisor 
+    - Department Number 
+  - **Employee:**
+    - Employee Name 
+    - Employee Number 
+  - **Project:**
+    - Project Name 
+    - Project Number 
+
+### Scenario 2: Salon with Hairstylists and Clients
+
+#### 1. Entities and Attributes
+- **Entities:**
+  - Hairstylist
+  - Client
+- **Attributes:**
+  - **Hairstylist:**
+    - First Name (Mandatory)
+    - Last Name (Mandatory)
+    - Address (Optional)
+    - Phone Number (Optional)
+    - Social Security Number (UID, Mandatory)
+  - **Client:**
+    - First Name (Mandatory)
+    - Last Name (Mandator, optional for walk ins)
+    - Phone Number (Mandatory, optional for walk ins)
+    - Client ID (UID, Mandatory)
+    - Hairstylist Preference (Optional)
+
+#### 2. ERD Relationships:
+- **Hairstylist ↔ Client:**
+- A hairstylist may see multiple clients
+- a client may be seen by only one hairstylists.
+
+### Scenario 3: Teachers, Courses, and Classes
+
+#### 1. Entities and Attributes
+- **Entities:**
+  - Teacher
+  - Course
+  - Class
+- **Attributes:**
+  - **Teacher:**
+    - First Name 
+    - Last Name 
+    - Address 
+    - Phone Number 
+    - Email Address 
+  - **Course:**
+    - Course Code 
+    - Course Name 
+  - **Class:**
+    - Class ID 
+    - Day 
+    - Time 
+    - Classroom 
+
+#### 2. ERD Relationships:
+- **Teacher ↔ Class:**
+  -  A teacher can teach one or more classes
+  -  Each class is taught by one teacher.
+- **Course ↔ Class:**
+  - Each course may be taught in multiple classes
+  - Each class is associated with one course.
+
+
 
 # Practice for
 
